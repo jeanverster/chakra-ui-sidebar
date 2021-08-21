@@ -4,8 +4,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
@@ -15,6 +14,8 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
+    "yalc:push": "yalc push",
+    "yalc:watch": "nodemon --exec \"yarn yalc:push\"",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
@@ -50,22 +51,31 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@chakra-ui/react": "^1.6.5",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@size-limit/preset-small-lib": "^5.0.1",
-    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.7",
     "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/addons": "^6.3.4",
-    "@storybook/react": "^6.3.4",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/addons": "^6.3.7",
+    "@storybook/react": "^6.3.7",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
     "babel-loader": "^8.2.2",
+    "framer-motion": "^4",
     "husky": "^7.0.1",
+    "nodemon": "^2.0.12",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
     "react-is": "^17.0.2",
+    "rollup-plugin-typescript-paths": "^1.3.0",
     "size-limit": "^5.0.1",
+    "storybook-addon-performance": "^0.16.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "yalc": "^1.0.0-pre.53"
   }
 }
